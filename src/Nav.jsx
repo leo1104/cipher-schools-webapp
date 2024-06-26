@@ -1,16 +1,17 @@
 import React from 'react'
 //props
-function Nav({name,age,isTeacher}) {
+function Nav({handleClick}) {
 
 //destructure the props/argument coming
 
 
 // const {name,age,isTeacher} = props //destructuring
 
-console.log(name,age,isTeacher);
 
   return (
-    <div>{""}</div>
+    <div>
+      <button onClick={()=>handleClick("heyyy")}>Click me</button>
+    </div>
   )
 }
 

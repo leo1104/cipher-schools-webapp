@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import About from './About'
 import Nav from './Nav';
-
+import Jasd from './Jasd';
 
 const Button = styled.button`
 background-color: red;
@@ -96,6 +96,57 @@ fun1(obj1,4)
 
 
 // destructure obj1 in the function fun1
+{/* //we have the component Nav */}
+
+
+{/* //hwo to take argument in a functional based component  */}
+
+{/* // There will be only 1 argument and the argument will be in an object form */}
+
+
+
+
+
+
+
+
+const shoppingList =[
+
+{
+  title:"1st product",
+  desc:"This is 1st product",
+  eligibleToBuy:true
+},
+{
+  title:"2nd product",
+  desc:"This is 2nd product",
+  eligibleToBuy:false
+},
+{
+  title:"3rd product",
+  desc:"This is 3rd product",
+  eligibleToBuy:true
+},
+
+]
+
+
+//make a component known as card
+
+// map the array of object and pass the data as props
+
+// in props pass title, desc and eligibleToBuy
+
+
+
+
+
+function qqq(arg1) {
+  console.log(arg1);
+}
+
+
+//function inside function
 
 
 
@@ -107,10 +158,17 @@ fun1(obj1,4)
 
 
 
+//create a component take a function as a prop inside the component and onClick of a 
+//button call the function should have an argument and log the argument from the parent function
+
+//passing a function as prop/argument/parameter to another function
 
 
 
 
+function fun1(arg1) {
+  console.log(arg1);
+}
 
 
 
@@ -120,14 +178,20 @@ fun1(obj1,4)
 
   return (
     <>
-{/* //we have the component Nav */}
+    {/* //called this function on render */}
+{/* <button onClick={qqq("arg1 called")}>Click me</button> */}
 
 
-{/* //hwo to take argument in a functional based component  */}
+<Nav handleClick={fun1}/>
 
-{/* // There will be only 1 argument and the argument will be in an object form */}
+    {/* {
+      shoppingList.map((prod)=>{
+        return(<Jasd title={prod.title} desc={prod.desc} eligible={prod.eligibleToBuy}/>)
+      })
+    } */}
+{/* //camel case  */}
+    {/* //onclick event   */}
 
-<Nav name={"Prantosh"} age={25} isTeacher={true} />
     </>
   )
 }
