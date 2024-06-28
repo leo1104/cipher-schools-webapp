@@ -238,26 +238,11 @@ const router = createBrowserRouter([
 ]);
 
 
-
-
-
-
-// console.log(router);
-
-
-
-
-
-
   return (
     <>
 <Nav/>
 
-
 <RouterProvider router={router} />
-
-
-
 
     </>
   )
