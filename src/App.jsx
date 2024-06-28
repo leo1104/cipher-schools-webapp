@@ -2,12 +2,28 @@ import styled from 'styled-components'
 import About from './About'
 import Nav from './Nav';
 import Jasd from './Jasd';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+
+
 
 const Button = styled.button`
 background-color: red;
 border-radius: 20px;
 `
+
+
+
+
 function App() {
+
+
+  
+
+
 
 //make an array and render the elements of the array on the webpage
 // const arr = [1,2,3,"Array"]
@@ -173,24 +189,75 @@ function fun1(arg1) {
 
 
 
+//prop is the 1st and only argument that you pass to a functional based component if used as a tag 
+//react router dom
+{/* //called this function on render */}
+{/* <button onClick={qqq("arg1 called")}>Click me</button> */}
+
+
+{/* <Nav handleClick={fun1}/> */}
+
+
+{/* //functional based component can also be defined like this: */}
+{/* {Nav("qwe","yyye")} */}
+{/* {
+  shoppingList.map((prod)=>{
+    return(<Jasd title={prod.title} desc={prod.desc} eligible={prod.eligibleToBuy}/>)
+  })
+} */}
+{/* //camel case  */}
+{/* //onclick event   */}
+
+
+//createBrowserRouter is a function
+//1 argument array of objects
+
+//name of path /home,/about,/...
+
+//whatever we want to render or show to the users comes inside path
+
+
+
+
+
+
+
+//add your own components instead of these div tags in elements
+
+
+//make your own component and render Ids 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>Hello qwerwer!</div>,
+  },
+  {
+    path: ":subProdId/about/:prodId",
+    element: <Jasd/>,
+  },
+]);
+
+
+
+
+
+
+// console.log(router);
+
+
+
 
 
 
   return (
     <>
-    {/* //called this function on render */}
-{/* <button onClick={qqq("arg1 called")}>Click me</button> */}
+<Nav/>
 
 
-<Nav handleClick={fun1}/>
+<RouterProvider router={router} />
 
-    {/* {
-      shoppingList.map((prod)=>{
-        return(<Jasd title={prod.title} desc={prod.desc} eligible={prod.eligibleToBuy}/>)
-      })
-    } */}
-{/* //camel case  */}
-    {/* //onclick event   */}
+
+
 
     </>
   )

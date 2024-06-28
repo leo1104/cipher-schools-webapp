@@ -1,11 +1,13 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
+function Jasd() {
 
-function Jasd({title,desc,eligible}) {
+
+const {prodId,subProdId} = useParams();
+
   return (
     <>
-    <h1>{title}</h1>
-    <p>{desc}</p>
-    <p>{eligible}</p>
+    This is the JASD {prodId} {subProdId}
     </>
   )
 }
