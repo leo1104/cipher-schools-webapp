@@ -6,6 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Home from './Home';
 
 
 
@@ -229,7 +230,11 @@ function fun1(arg1) {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello qwerwer!</div>,
+    element: <Home/>,
+  },
+  {
+    path: "/about",
+    element: <About/>,
   },
   {
     path: ":subProdId/about/:prodId",
@@ -240,7 +245,7 @@ const router = createBrowserRouter([
 
   return (
     <>
-<Nav/>
+{/* <Nav/> */}
 
 <RouterProvider router={router} />
 
