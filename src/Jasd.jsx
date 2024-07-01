@@ -19,6 +19,7 @@ const age = searchParams.get('age')
     <>
     {/* This is the JASD {prodId} {subProdId} */}
     this is my name : {name}, {age}
+
     </>
   )
 }

@@ -3,8 +3,11 @@ import About from './About'
 import Nav from './Nav';
 import Jasd from './Jasd';
 import {
+  BrowserRouter,
   createBrowserRouter,
+  Route,
   RouterProvider,
+  Routes,
 } from "react-router-dom";
 import Home from './Home';
 
@@ -243,11 +246,53 @@ const router = createBrowserRouter([
 ]);
 
 
+
+
+
+
+
+
+
+//convert your app.jsx file from 
+// createBrowserRouter to browserRouter tag and add a common component which will be visible in all the routes
+
+
+
+
+
+
+
+
+
+
   return (
     <>
-{/* <Nav/> */}
+{/* <Nav/>
 
-<RouterProvider router={router} />
+<RouterProvider router={router} /> */}
+
+
+{/* <BrowserRouter>
+
+
+<Nav/>
+
+<Routes>
+
+<Route path= {"/"} element= {<Home/>}/>
+<Route path= {"/about"} element= {<About/>}/>
+
+</Routes>
+</BrowserRouter> */}
+
+
+<Home>
+
+<p style={{background:'black',color:'blue'}}>asdafwefwerf</p>
+
+</Home>
+
+
 
     </>
   )

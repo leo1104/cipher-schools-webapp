@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Home() {
+function Home({children}) {
   return (
     <div>
         {/* <a href='/about'>ABout</a> */}
-        <Link to={'/about'}>About</Link>
+      {children}
     </div>
   )
 }
