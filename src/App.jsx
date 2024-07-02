@@ -10,6 +10,9 @@ import {
   Routes,
 } from "react-router-dom";
 import Home from './Home';
+import Modal from './Modal';
+import HooksConcept from './HooksConcept';
+import QuestionAns from './QuestionAns';
 
 
 
@@ -261,7 +264,7 @@ const router = createBrowserRouter([
 
 
 
-
+console.log("logs rerender");
 
 
 
@@ -286,13 +289,57 @@ const router = createBrowserRouter([
 </BrowserRouter> */}
 
 
-<Home>
-
-<p style={{background:'black',color:'blue'}}>asdafwefwerf</p>
-
-</Home>
 
 
+
+
+
+
+
+
+
+
+
+{/* //make a card component with same layout but the inside thing should be inherited or taken from the caller
+
+//it should take variable tags as well and call the card 4 times with different tags */}
+
+{/* children */}
+
+{/* // practice question*/}
+
+
+
+
+
+
+
+
+
+
+{/* <Modal>
+<p>1st modal</p>
+
+</Modal>
+
+<Modal>
+<h1>2nd modal</h1>
+
+</Modal>
+<Modal>
+
+<div>
+    <p>
+        <span>3rd modal</span>
+    </p>
+</div>
+</Modal>
+
+<Modal>
+<section>4th modal</section>
+
+</Modal> */}
+<HooksConcept/>
 
     </>
   )
