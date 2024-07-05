@@ -13,6 +13,10 @@ import Home from './Home';
 import Modal from './Modal';
 import HooksConcept from './HooksConcept';
 import QuestionAns from './QuestionAns';
+import PropsDestructuring from './PropsDestructuring';
+import ConceptofUseState from './ConceptofUseState';
+import InputComponent from './InputComponent';
+import ImageUpload from './ImageUpload';
 
 
 
@@ -339,8 +343,12 @@ console.log("logs rerender");
 <section>4th modal</section>
 
 </Modal> */}
-<HooksConcept/>
+{/* <HooksConcept/> */}
+{/* <PropsDestructuring name={"prantosh"} age={77} /> */}
+{/* <ConceptofUseState/> */}
+{/* <InputComponent/> */}
 
+<ImageUpload/>
     </>
   )
 }
